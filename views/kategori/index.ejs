@@ -38,40 +38,27 @@
     <table id="example" class="display nowrap">
                 <thead>
                     <tr>
-                        <th>Nama</th>
                         <th>Nomor</th>
-                        <th colspan="2">Aksi</th>
+                        <th>Nama</th>
+                
                     </tr>
                 </thead>
                 <tbody>
+                    <% for(var i = 0; i < data.length; i++) { %>
+
                     <tr>
-                        <td>Tukiyem</td>
-                        <td>08595272725</td>
-                        <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit">Edit</button>
-                        </td>
-                        <td><button class="btn btn-danger">Delete</button></td>
+                        <td><%= (i+1) %></td>
+                        <td><%= data[i].nama_kategori %></td>
                     </tr>
-                    <tr>
-                        <td>Sukinem</td>
-                        <td>08716237136</td>
-                        <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit">Edit</button>
-                        </td>
-                        <td><button class="btn btn-danger">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <td>Laksamana</td>
-                        <td>08213456789</td>
-                        <td><button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#edit">Edit</button>
-                        </td>
-                        <td><button class="btn btn-danger">Delete</button></td>
-                    </tr>
+                  
+                     <% } %>
 
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Nama</th>
                         <th>Nomor</th>
-                        <th colspan="2">Aksi</th>
+                        <th>Nama</th>
+                        
                     </tr>
                 </tfoot>
             </table>

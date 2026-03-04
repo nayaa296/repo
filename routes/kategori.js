@@ -1,10 +1,15 @@
 var express = require('express');
+const connection = require('../config/database');
 var router = express.Router();
 
 router.get('/', function(req, res, next){
-    res.render('kategori',
-        {
-            judul : 'Kategori no, nama, aksi'
+    connection.query('select * from kategori order by id_kategori desc', function(err, rows){
+
+        res.render('kategori/index',
+            {
+                judul : 'Halaman Kategori',
+                data: rows
+            });
         });
 });
 
